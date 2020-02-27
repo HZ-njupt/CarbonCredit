@@ -6,8 +6,8 @@
     </router-link>
     <mt-button icon="more" slot="right"></mt-button>
    </mt-header>
-   <credit v-if="if1"></credit>
-   <commodity v-if="if2"></commodity>
+   <credit></credit>
+   <!-- <commodity ></commodity> -->
    <mt-tabbar>
    <mt-tab-item id="mainpage">
     <img slot="icon" >首页
@@ -47,8 +47,6 @@ export default {
   },
   data () {
     return {
-      if1 : false,
-      if2 : true,
     }
   }
 }
