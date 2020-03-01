@@ -1,11 +1,11 @@
 import Mock from 'mockjs'
 import * as login from './modules/login'
-
+import * as store from './modules/store'
 
 // 1. 开启/关闭[业务模块]拦截, 通过调用fnCreate方法[isOpen参数]设置.
 // 2. 开启/关闭[业务模块中某个请求]拦截, 通过函数返回对象中的[isOpen属性]设置.
 fnCreate(login, true)
-
+fnCreate(store, true)
 
 /**
  * 创建mock模拟数据

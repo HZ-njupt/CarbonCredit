@@ -3,7 +3,7 @@
    <div class="creditbox box"></div>
    <div class="getcredit box"></div>
    <h5 style="text-align:left">最近行程</h5>
-   <div class="box journey"></div>
+   <div class="box journey" ></div>
 </div>
 </template>
 
