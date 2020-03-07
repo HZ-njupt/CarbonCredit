@@ -1,7 +1,7 @@
 export function store () {
     return {
       // isOpen: false,
-      url: 'http://localhost:8080/store',
+      url: 'http://localhost:8081/store',
       type: 'get',
       data: {
         'msg': 'success',

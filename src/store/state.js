@@ -1,6 +1,9 @@
 const state = {
-    StorelList : [],
-    showStore : 'false'
+    StoreList : [],
+    CreditList:[],
+    JourneyList:[],
+    showStore : 'false',
+    showHome:'false',
 }
   
 export default state

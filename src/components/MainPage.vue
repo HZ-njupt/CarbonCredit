@@ -6,7 +6,7 @@
     </router-link>
     <mt-button icon="more" slot="right"></mt-button>
    </mt-header>
-   <!-- <credit></credit> -->
+   <credit v-if="$store.state.showHome"></credit>
    <commodity v-if="$store.state.showStore"></commodity>
    <mt-tabbar v-model="selected">
    <mt-tab-item id="mainpage">
@@ -66,6 +66,8 @@ export default {
                    
           }else if(val === "store"){
               this.$store.commit('GetStore')           
+          }else if(val === "mainpage"){
+              this.$store.dispatch('GetHome')           
           }
           else{
             
