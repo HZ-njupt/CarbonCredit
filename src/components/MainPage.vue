@@ -8,6 +8,7 @@
    </mt-header>
    <credit v-if="$store.state.showHome"></credit>
    <commodity v-if="$store.state.showStore"></commodity>
+   <pk v-if="$store.state.showPk"></pk>
    <mt-tabbar v-model="selected">
    <mt-tab-item id="mainpage">
     <img slot="icon" >首页
@@ -43,11 +44,13 @@ import axios from 'axios'
 // Vue.component(Header.name, Header);
 import credit from './homepage/Credit'
 import commodity from './store/Commodity'
+import pk from './friends/Pk'
 export default {
   name: 'MainPage',
   components: {
       'credit' : credit ,
       'commodity' : commodity,
+      'pk' : pk,
   },
   data () {
     return {
@@ -63,7 +66,7 @@ export default {
           sessionStorage.setItem('selected', JSON.stringify(val))
           
           if(val === 'friends'){
-                   
+              this.$store.commit('GetPk')   
           }else if(val === "store"){
               this.$store.commit('GetStore')           
           }else if(val === "mainpage"){

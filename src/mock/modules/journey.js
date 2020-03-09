@@ -10,7 +10,6 @@ export function journey () {
             {'date':'2019.02.02','statime': '10:50','endtime': '11:00', 'staloc':'A','endloc': 'B', 'credit': 3},
             {'date':'2019.02.03','statime': '10:50','endtime': '11:00', 'staloc':'A','endloc': 'B', 'credit': 3},
             {'date':'2019.02.04','statime': '10:50','endtime': '11:00', 'staloc':'A','endloc': 'B', 'credit': 3}, 
-          // 其他数据
         ]
       }
     }

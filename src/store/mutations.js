@@ -6,8 +6,9 @@ const mutations = {
        axios.get('http://localhost:8081/store')
        .then((res)=>{
           state.StoreList=res.data.data;
-          state.showStore='true',
-          state.showHome='false'
+          state.showStore=true;
+          state.showHome=false;
+          state.showPk=false;
        }).catch((res)=>{
          alert(res);
        });
@@ -17,8 +18,9 @@ const mutations = {
       axios.get('http://localhost:8081/credit')
       .then((res)=>{
          state.CreditList=res.data.data;
-         state.showStore='false',
-         state.showHome='true'
+         state.showStore=false;
+         state.showHome=true;
+         state.showPk=false;
       }).catch((res)=>{
         alert(res);
       });
@@ -27,12 +29,18 @@ const mutations = {
       axios.get('http://localhost:8081/journey')
       .then((res)=>{
          state.JourneyList=res.data.data;
-         state.showStore='false',
-         state.showHome='true'
+         state.showStore=false;
+         state.showHome=true;
+         state.showPk=false;
       }).catch((res)=>{
         alert(res);
       });
-   }
+   },
+   GetPk(state){
+      state.showPk=true;
+      state.showStore=false;
+      state.showHome=false;
+   },
 }
   
 export default mutations
